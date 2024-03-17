@@ -1,2 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Program
+{
+    public static void Main(string[] args)
+    {
+        DataGeneric<String> dataGeneric = new DataGeneric<string>("1302223042");
+        dataGeneric.PrintData();
+    }
+}
+
+public class DataGeneric <T>
+{
+    private T data;
+
+    public DataGeneric(T data)
+    {
+        this.data = data;
+    }
+
+    public void PrintData()
+    {
+        T y = this.data;
+        Console.WriteLine("Data yang tersimpan adalah: " + y);
+    }
+}
